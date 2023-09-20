@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background: #1b1a1a;
+            color: white;
+        }
+        .container {
+            
+            width: 100vw;
+            height: 600px;
+        }
+
+        .p1{
+            padding-top: 40px;
+            display: none;
+        }
+        button {
+            width: 80%;
+            text-align: left;
+            height: 50px;
+            border-radius: 25px;
+            padding-left: 20px;
+            border: none;
+            background: rgb(52, 50, 50);
+        }
+        button p{
+            display: inline-block;
+            width: 80%;
+            background: rgb(52, 50, 50);
+
+        }
+        div p{
+            display: inline-block;
+            width: 80%;
+            background: rgb(52, 50, 50);
+        }
+        .Gdd5U {
+            background: rgb(52, 50, 50);
+                height: 20px;
+                width: 20px;
+                vertical-align: middle;
+                margin-left: 1px;
+                padding-bottom: 3px;
+            }
+
+        #search, .result{
+            border-radius: 20px;
+            border-bottom: 1px rgb(52, 50, 50) solid;
+            /* padding-left: 20px; */
+        }
+        #search img{
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 20px;
+            height: 15px;
+        }
+        #search input{
+            width: 75%;
+            border: none;
+        }
+        .result{
+            height: 30px;
+            text-align: left;
+            padding-left: 20px;
+            border: 1px gray solid;
+            padding-bottom: 10px;
+            background: rgb(52, 50, 50);
+        }
+        .p2{
+            display: none;
+        }
+        .answer{
+            background-color:#1b1a1a;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container p0">
+        <input type="text" name="title" value="">
+        <input type="text" name="search" value="">
+        <input type="text" name="answer" value="">
+        <button onclick="fun()">click</button>
+    </div>
+
+    <div class="container p1">
+        <center>
+            <h1 align="center">Ooble</h1>
+            <button id="init"><p>search</p><i class="fa fa-microphone"></i> <svg
+                class="Gdd5U" focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+                <rect fill="none" height="192" width="192"></rect>
+                <g>
+                    <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
+                    <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
+                    <path fill="#ea4335"
+                        d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z">
+                    </path>
+                    <path fill="#fbbc04"
+                        d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z">
+                    </path>
+                    <path fill="#4285f4"
+                        d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z">
+                    </path>
+                </g>
+            </svg></button>
+    </center>
+    </div>
+
+    <div class="container p2">
+        <div id="search">
+            <img src="logo1.png" alt="O">
+            <input id="inp" type="text" placeholder="search"><i class="fa fa-microphone"></i> <svg
+            class="Gdd5U" focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="192" width="192"></rect>
+            <g>
+                <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
+                <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
+                <path fill="#ea4335"
+                    d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z">
+                </path>
+                <path fill="#fbbc04"
+                    d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z">
+                </path>
+                <path fill="#4285f4"
+                    d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z">
+                </path>
+            </g>
+        </svg></div>
+    </div>
+
+    <div class="container p3">
+        <center>
+        <h1 align="center">Ooble</h1>
+        </center>
+        <div class="result"><p class="search">search</p><i class="fa fa-microphone"></i> <svg
+            class="Gdd5U" focusable="false" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+            <rect fill="none" height="192" width="192"></rect>
+            <g>
+                <circle fill="#34a853" cx="144.07" cy="144" r="16"></circle>
+                <circle fill="#4285f4" cx="96.07" cy="104" r="24"></circle>
+                <path fill="#ea4335"
+                    d="M24,135.2c0,18.11,14.69,32.8,32.8,32.8H96v-16l-40.1-0.1c-8.8,0-15.9-8.19-15.9-17.9v-18H24V135.2z">
+                </path>
+                <path fill="#fbbc04"
+                    d="M168,72.8c0-18.11-14.69-32.8-32.8-32.8H116l20,16c8.8,0,16,8.29,16,18v30h16V72.8z">
+                </path>
+                <path fill="#4285f4"
+                    d="M112,24l-32,0L68,40H56.8C38.69,40,24,54.69,24,72.8V92h16V74c0-9.71,7.2-18,16-18h80L112,24z">
+                </path>
+            </g>
+        </svg></div>
+        <div class="container answer">
+            <h1 class="title" align="left">Title</h1>
+            <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae provident error debitis? Labore eius distinctio, numquam suscipit iure debitis sit sed enim earum eos minus corporis a iste tenetur quisquam totam. Harum, laboriosam corrupti?</p>
+        </div>
+    </div>
+</body>
+<script>
+    var title="result"
+    var answer="answer"
+    var search="search"
+
+    function fun(){
+        
+        var x=document.getElementsByName("title")[0]
+        title=x.value
+        var y=document.getElementsByName("answer")[0]
+        answer=y.value
+        var z=document.getElementsByName("search")[0]
+        search=z.value
+        document.getElementsByClassName("p0")[0].style.display="none";
+        document.getElementsByClassName("p1")[0].style.display="block";
+        
+    }
+    document.getElementById("init").addEventListener("click",()=>{
+        document.getElementsByClassName("p1")[0].style.display="none";
+        document.getElementsByClassName("p2")[0].style.display="block";
+    })
+    document.getElementById("inp").addEventListener("keypress",function(event){
+        if(event.key==="Enter"){
+            document.getElementsByClassName("p2")[0].style.display="none";
+            document.getElementsByClassName("p3")[0].style.display="block";
+            var x=document.getElementsByClassName("title")[0]
+        x.textContent=title
+        x=document.getElementsByClassName("answer")[1]
+        x.textContent=answer
+        x=document.getElementsByClassName("search")[0]
+        x.textContent=search
+        }
+    })
+</script>
+</html>
